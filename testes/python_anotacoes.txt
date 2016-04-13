@@ -1,0 +1,316 @@
+#################### PYTHON ###############################
+
+# Atribua um valor a variavel total na linha 8!
+#CALCULADORA DE GORJETA
+meal = 44.50 #valor
+tax = 0.0675 #taxa  %
+tip = 0.15	 #gorjeta %
+
+meal = meal + meal * tax
+total = meal + meal * tip
+
+print("%.2f" % total)
+######################################################
+#Strings
+"""
+Cada caractere em uma string recebe um número. Este número é chamado o índice. Verifique o diagrama no editor.
+c = "gatos"[0]
+n = "Ryan"[3]
+No exemplo acima, criamos uma nova variável chamada c e lhe atribuímos o valor "g", o caractere no índice zero da string "gatos".
+A seguir, criamos uma nova variável chamada n e lhe atribuímos o valor "n", o caractere no índice três da string "Ryan".
+No Python, contamos o índice a partir do zero em vez do um.
+
+A string "PYTHON" tem seis caracteres,
+numerados de 0 a 5, como mostrado abaixo:
++---+---+---+---+---+---+
+| P | Y | T | H | O | N |
++---+---+---+---+---+---+
+  0   1   2   3   4   5
+Entao, se você quisesse o "Y", poderia digitar
+"PYTHON"[1] (sempre comece contanto a partir do 0!)
+"""
+fifth_letter = "MONTY"[4]
+print fifth_letter
+######################################################
+#Contar caracteres
+print len(parrot)
+#Se livrar de maiusculas
+print parrot.lower()
+#toda string em maiusculo
+print parrot.upper()
+######################################################
+"""Declare e atribua um valor a sua variável na linha 4,
+então chame seu método na linha 5!"""
+#Converter uma string para uma não string
+pi = 3.14
+print str(pi)
+#Concatenação de string
+print "Alfredo "+"Egranfonte"
+#O operador % depois de uma string é usado para combinar uma string com variáveis. 
+#O operador % substituirá um %s na string pela variável string que vem depois dele.
+string_1 = "Camelot"
+string_2 = "lugar"
+print "Nao vamos para %s. E um %s bobo." % (string_1, string_2)
+######################################################
+name = raw_input("Qual e o seu nome?")
+quest = raw_input("Qual e sua missao?")
+color = raw_input("Qual e sua cor favorita?")
+print "Ah, entao seu nome e %s, sua missao e %s, " \
+"e sua cor favorita e %s." % (name, quest, color)
+######################################################
+from datetime import datetime
+
+now = datetime.now()
+print(now)
+print now.year
+print now.month
+print now.day
+######################################################
+from datetime import datetime
+now = datetime.now()
+
+print '%s:%s:%s' % (now.hour, now.minute, now.second)
+######################################################
+from datetime import datetime
+now = datetime.now()
+
+print '%s/%s/%s %s:%s:%s' % (now.month,now.day,now.year,now.hour, now.minute, now.second)
+######################################################
+def clinic():
+    print "Voce acabou de entrar na clinica!"
+    print "Voce entra pela porta a esquerda (left) ou a direita (right)?"
+    answer = raw_input("Digite left (esquerda) ou right (direita) e pressione 'Enter'.").lower()
+    if answer == "left" or answer == "l":
+        print "Esta e a sala de Abuso Verbal, seu monte de caca de papagaio!"
+    elif answer == "right" or answer == "r":
+        print "E claro que esta e a Sala das Discussoes. Eu ja disse isso!"
+    else:
+        print "Voce nao escolheu esquerda ou direita. Tente de novo."
+        clinic()
+
+clinic()
+######################################################
+#Comparadores. Existem seis:
+Igual a ("==")
+Diferente de ("!=")
+Menor do que ("<")
+Menor ou igual a ("<=")
+Maior que (">")
+Maior ou igual a (">=")
+######################################################
+# Atribua True ou False conforme apropriado nas linhas abaixo!
+# Atribua True se 17 < 328 ou False se nao for.
+bool_one = True   # Fizemos esta para voce!
+# Atribua True se 100 == (2 * 50) ou False caso contrario.
+bool_two = True
+# Atribua True se 19 <= 19 ou False se nao for.
+bool_three = True
+# Atribua True se -22 >= -18 ou False se nao for.
+bool_four = False
+# Atribua True se 99 != (98 + 1) ou False caso contrário.
+bool_five = False
+######################################################
+# Atribua True ou False conforme apropriado nas linhas abaixo!
+# (20 - 10) > 15
+bool_one = False    # Fizemos esta para voce!
+# (10 + 17) == 3**16
+# Lembre-se que ** pode ser lido como 'elevado a'. 3**16 e cerca de 43 milhoes.
+bool_two = False
+# 1**2 <= -1
+bool_three = False
+# 40 * 4 >= -4
+bool_four = True
+# 100 != 10**2
+bool_five = False
+######################################################
+# Crie declaracoes comparativas conforme apropriado nas linhas abaixo!
+# Torne-me verdade!
+bool_one = 3 < 5  # Ja fizemos este para voce!
+# Torne-me falso!
+bool_two = 1 <= -1
+# Torne-me verdade!
+bool_three = 1**2 == 1
+# Torne-me falso!
+bool_four = 10 != 10
+# Torne-me verdade!
+bool_five = (50-10) >= 5
+######################################################
+"""
+Operadores booleanos comparam declarações e resultam em valores booleanos. Há três operadores booleanos:
+
+and (e), que verifica se as duas afirmações são True;
+or (ou), que verifica se pelo menos uma das afirmações é True;
+not (não), que gera o op(osto da afirmação.
+
+
+ Operadores Booleanos
+------------------------      
+True and True e True
+True and False e False
+False and True e False
+False and False e False
+
+True or True e True
+True or False e True
+False or True e True
+False or False e False
+
+Not True e False
+Not False e True
+"""
+######################################################
+# Use expressoes booleanas nas linhas abaixo conforme apropriado!
+# Torne-me falso!
+bool_one = (2 <= 2) and "Alpha" == "Bravo"  # Fizemos esta para voce!
+# Torne-me verdadeiro!
+bool_two = (3**4 == 81) and "D" or "D" 
+# Torne-me falso!
+bool_three = (-(-2)) < 1 or -3 > 3
+# Torne-me verdadeiro!
+bool_four = not False and True 
+# Torne-me verdadeiro!
+bool_five = not False and not not True
+######################################################
+response = 'Y'
+answer = "Left"
+if answer == "Left":
+    print "Esta e a Sala de Abuso Verbal, seu monte de caca de papagaio!"  
+# A declaracao print acima sera exibida no console?
+# Iguale response a 'Y' se achar que sim, ou 'N' se achar que nao.
+######################################################
+answer = "E so um arranhao!"
+def black_knight():
+    if answer == "E so um arranhao!":
+        return True
+    else:             
+        return False  # Tenha certeza de que isso retorna False
+def french_soldier():
+    if answer == "Va embora, ou vou zombar de voce mais uma vez!":
+        return True
+    else:             
+        return  False # Tenha certeza de que isso retorna False
+######################################################
+def greater_less_equal_5(answer):
+    if answer > 5:
+        return 1
+    elif answer < 5:          
+        return -1
+    else:
+        return 0        
+print greater_less_equal_5(4) #-1
+print greater_less_equal_5(5) #0
+print greater_less_equal_5(6) #1
+######################################################
+# Tenha certeza que the_flying_circus() retorna True
+def the_flying_circus():
+    if (not False or True):    # Comece seu codigo aqui!
+        return True
+        # Nao esqueca de recuar
+        # o codigo dentro deste bloco!
+    elif 3-4 == 2**1:
+        return True
+        # Continue aqui.
+        # Voce vai querer adicionar tambem a declarao else!
+    else:
+        return true
+
+######################################################
+'''
+Pig Latin é um jogo linguístico, em que você move a primeira letra da palavra para o final e adiciona "ay". Então, "Python" se torna "ythonpay". Eis as etapas que você deverá realizar para escrever um tradutor de Pig Latin em Python.
+
+Peça ao usuário para inserir uma palavra em inglês.
+Garanta que o usuário inseriu uma palavra válida.
+Converta a palavra do inglês para o Pig Latin.
+Exiba o resultado da tradução.
+'''
+print 'Bem-vindo ao Tradutor de Pig Latin!'
+print 'Bem-vindo ao Tradutor de Pig Latin!'
+# Comece seu codigo aqui!
+original = raw_input("Enter a word:")
+if len(original) > 0:
+    print original
+else:
+    print "empty"
+#########
+print 'Bem-vindo ao Tradutor de Pig Latin!'
+
+# Comece seu codigo aqui!
+original = raw_input("Enter a word:")
+if len(original) > 0 and original.isalpha():
+    print original
+else:
+    print "empty"
+#########
+pyg = 'ay'
+original = raw_input('Enter a word:')
+if len(original) > 0 and original.isalpha():
+    word = original.lower()
+    first = word[0]
+    print original
+else:
+    print 'empty'	
+#########
+pyg = 'ay'
+original = raw_input('Enter a word:')
+if len(original) > 0 and original.isalpha():
+    word = original.lower()
+    first = word[0]
+    new_word = word + first + pyg
+    print original
+else:
+    print 'empty'
+#########
+pyg = 'ay'
+original = raw_input('Enter a word:')
+if len(original) > 0 and original.isalpha():
+    word = original.lower()
+    first = word[0]
+    new_word = word + first + pyg
+    new_word = new_word[1:len(new_word)]
+    print original
+else:
+    print 'empty'
+#########
+	
+######################################################
+função isalpha() :
+retorna False, já que a string contém caracteres que não são letras.
+######################################################
+def tax(bill):
+    """Soma 8% de imposto a uma conta de restaurante."""
+    bill *= 1.08
+    print "Com imposto: %f" % bill
+    return bill
+
+def tip(bill):
+    """Soma uma gorjeta de 15% a uma conta de restaurante."""
+    bill *= 1.15
+    print "com gorjeta de: %f" % bill
+    return bill
+    
+meal_cost = 100
+meal_with_tax = tax(meal_cost)
+meal_with_tip = tip(meal_with_tax)
+
+######################################################
+
+######################################################
+
+######################################################
+
+######################################################
+
+######################################################
+
+######################################################
+
+######################################################
+
+######################################################
+
+######################################################
+
+######################################################
+
+
+
