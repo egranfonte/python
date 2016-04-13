@@ -25,15 +25,16 @@ else:
 '''
 
 #teste 3
-pyg = 'ay'
-
-original = input('Enter a word:')
+pyg = 'Egranfonte'
+print ("Entre para familia ")
+print (" ")
+original = input('Digite seu nome:')
 
 if len(original) > 0 and original.isalpha():
     word = original.lower()
     first = word[0]
-    new_word = word + first + pyg
-    new_word = new_word[1:len(new_word)]
+    new_word = word + first + pyg.upper()
+    new_word = new_word[0:len(new_word)] #new_word = new_word[1:len(new_word)]
     print (original)
     print(new_word)
 else:
